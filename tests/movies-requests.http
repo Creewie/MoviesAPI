@@ -1,0 +1,65 @@
+### DODANIE WSZYSZTKIEGO DO BAZ
+
+
+### GET Movie
+GET http://localhost:5000/movies
+
+### Get Movie ID
+GET http://localhost:5000/movies/682f0f9d8a58e7b13e7f4df1
+
+### PUT Movie
+PUT http://localhost:5000/movies/682f0f9d8a58e7b13e7f4df1
+Content-Type: application/json
+
+{
+  "genre": "przygodowy"
+}
+
+### DELETE Movie
+DELETE http://localhost:5000/movies/682f09bcf6aba315748bfe18
+
+### POST Movie
+POST http://localhost:5000/movies
+Content-Type: application/json
+
+{
+  "title": "Władca Pierścieni: Drużyna Pierścienia",
+  "releaseYear": 2001,
+  "genre": "fantasy",
+  "director": "Peter Jackson",
+  "cast": [
+    "Elijah Wood",
+    "Ian McKellen",
+    "Sean Astin",
+    "Vigo Mortensen",
+    "Christopher Lee"
+  ],
+  "rating": 8,
+  "description": "opis"
+}
+
+### POST Review
+POST http://localhost:5000/reviews
+Content-Type: application/json
+
+{
+  "author": "Jan Kowalski",
+  "content": "Bardzo dobry film, polecam!",
+  "movieId": "6652de9873fbb3b28fc52a01"
+}
+
+### Get Review
+GET http://localhost:5000/reviews
+
+
+### PUT Review
+PUT http://localhost:5000/reviews/682f1441c4ca40509ab7a48a
+Content-Type: application/json
+
+{
+  "content": "Film był świetny, ale zakończenie mnie zawiodło."
+}
+
+
+### DELETE Review
+DELETE http://localhost:5000/reviews/682f1441c4ca40509ab7a48a
