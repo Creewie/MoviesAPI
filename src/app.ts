@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 // ✅ Rejestracja routerów
 app.use("/movies", movieRoutes);
 app.use("/movies/:id/reviews", reviewRoutes);
+app.use("/reviews", reviewRoutes);
 
 // Główna strona API
 app.get("/", (req, res) => {

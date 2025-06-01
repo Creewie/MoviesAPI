@@ -1,41 +1,40 @@
-### DODANIE WSZYSZTKIEGO DO BAZ
-
-
-### GET Movie
+### GET Movies
 GET http://localhost:5000/movies
 
-### Get Movie ID
-GET http://localhost:5000/movies/682f0f9d8a58e7b13e7f4df1
+//Pamiętaj że id masz na /movies
+### GET Movie by ID
+GET http://localhost:5000/movies/683c3d6485afcf9d217f2dcd
 
 ### PUT Movie
-PUT http://localhost:5000/movies/682f0f9d8a58e7b13e7f4df1
+PUT http://localhost:5000/movies/683c3d6485afcf9d217f2dcd
 Content-Type: application/json
 
 {
-  "genre": "przygodowy"
+  "genre": "Comedy Drama"
 }
 
 ### DELETE Movie
-DELETE http://localhost:5000/movies/682f09bcf6aba315748bfe18
+DELETE http://localhost:5000/movies/683c3e9885afcf9d217f2dd4
 
 ### POST Movie
 POST http://localhost:5000/movies
 Content-Type: application/json
 
 {
-  "title": "Władca Pierścieni: Drużyna Pierścienia",
-  "releaseYear": 2001,
-  "genre": "fantasy",
-  "director": "Peter Jackson",
+  "title": "How to sell drugs online(fast)",
+  "releaseYear": 2019,
+  "genre": "Comedy",
+  "director": "Lars Montag",
   "cast": [
-    "Elijah Wood",
-    "Ian McKellen",
-    "Sean Astin",
-    "Vigo Mortensen",
-    "Christopher Lee"
+    "Maximilian Mundt",
+    "Danilo Kamber",
+    "Damian Hardung",
+    "Luna Baptiste Schaller",
+    "Bjarne Mädel",
+    "Leonie Wesselow"
   ],
-  "rating": 8,
-  "description": "opis"
+  "rating": 10,
+  "description": "To impress his former girlfriend, a nerdy teen starts selling drugs online out of his bedroom, and soon becomes one of Europe's biggest dealers."
 }
 
 ### POST Review
@@ -43,9 +42,9 @@ POST http://localhost:5000/reviews
 Content-Type: application/json
 
 {
-  "author": "Jan Kowalski",
-  "content": "Bardzo dobry film, polecam!",
-  "movieId": "6652de9873fbb3b28fc52a01"
+  "author": "Franek Czarnech",
+  "content": "Moją pasją są konie i narkotyki więc idealny film dla mnie",
+  "movieId": "683c3c8185afcf9d217f2dc7"
 }
 
 ### Get Review
@@ -53,13 +52,13 @@ GET http://localhost:5000/reviews
 
 
 ### PUT Review
-PUT http://localhost:5000/reviews/682f1441c4ca40509ab7a48a
+PUT http://localhost:5000/reviews/683c3d6485afcf9d217f2dcd
 Content-Type: application/json
 
 {
-  "content": "Film był świetny, ale zakończenie mnie zawiodło."
+  "content": "Ludzie mówili że słaby, ale mnie się podobało"
 }
 
 
 ### DELETE Review
-DELETE http://localhost:5000/reviews/682f1441c4ca40509ab7a48a
+DELETE http://localhost:5000/reviews/683c3c8185afcf9d217f2dc7

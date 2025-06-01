@@ -80,7 +80,7 @@ router.delete("/:id", async (req, res): Promise<any> => {
 });
 
 // GET /movies/:id - pobierz pojedynczy film
-router.get("/:id", async (req, res): Promise<any> => {
+router.get("/movies/:id", async (req, res): Promise<any> => {
     try {
         const movie = await MovieModel.findById(req.params.id);
 
