@@ -44,7 +44,7 @@ Content-Type: application/json
 {
   "author": "Franek Czarnech",
   "content": "Moją pasją są konie i narkotyki więc idealny film dla mnie",
-  "movieId": "683c3c8185afcf9d217f2dc7"
+  "movieId": "683c3d6485afcf9d217f2dcd"
 }
 
 ### Get Review
@@ -52,7 +52,7 @@ GET http://localhost:5000/reviews
 
 
 ### PUT Review
-PUT http://localhost:5000/reviews/683c3d6485afcf9d217f2dcd
+PUT http://localhost:5000/reviews/683c265b6fedb058ba9923f0
 Content-Type: application/json
 
 {
@@ -61,4 +61,4 @@ Content-Type: application/json
 
 
 ### DELETE Review
-DELETE http://localhost:5000/reviews/683c3c8185afcf9d217f2dc7
+DELETE http://localhost:5000/reviews/683c265b6fedb058ba9923f0

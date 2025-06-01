@@ -31,7 +31,6 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // ✅ Rejestracja routerów
 app.use("/movies", movieRoutes);
-app.use("/movies/:id/reviews", reviewRoutes);
 app.use("/reviews", reviewRoutes);
 
 // Główna strona API
@@ -39,15 +38,15 @@ app.get("/", (req, res) => {
     res.json({ message: "API Express + TypeScript działa" });
 });
 
-// ✅ 404 - Nie znaleziono endpointu
-app.use((req, res) => {
-    res.status(404).json({ message: "Strona nie istnieje" });
-});
-
 // ✅ Obsługa błędów
 app.use((err: Error, req: Request, res: Response) => {
     console.error(err.stack);
     res.status(500).json({ message: "Wystąpił błąd serwera" });
+});
+
+// ✅ 404 - Nie znaleziono endpointu
+app.use((req, res) => {
+    res.status(404).json({ message: "Strona nie istnieje" });
 });
 
 const PORT = process.env.PORT || 5000;
